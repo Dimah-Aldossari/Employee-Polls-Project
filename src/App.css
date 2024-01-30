@@ -1,38 +1,239 @@
-.App {
-  text-align: center;
+* {
+  margin: 0px;
+  padding: 0px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  background-color: #ccbcdc;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ul {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.btn-box {
+  width: 80%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.btn {
+  margin-right: 10px;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+}
+.input {
+  padding: 8px 16px;
+  width: 70%;
+  margin: 3px;
+}
+
+/* Landing */
+
+.landing {
+  background-image: url("https://images.pexels.com/photos/289737/pexels-photo-289737.jpeg?auto=compress&cs=tinysrgb&w=800");
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: cover;
+  margin: 0px;
+  text-align: center;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: #ccc;
+  font-size: larger;
+}
+.question-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.avatar {
+  width: 50px; /* adjust as needed */
+  height: 50px; /* adjust as needed */
+  border-radius: 50%;
 }
 
-.App-link {
-  color: #61dafb;
+.question-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.avatar {
+  width: 70px;
+  height: 70px;
+  margin: 10px 0px;
+  border-radius: 50%;
+}
+
+.option {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.option.voted {
+  background-color: lightgreen;
+}
+
+.vote-thanks {
+  color: green;
+}
+
+.navbar-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-item {
+  margin-right: 10px;
+}
+
+/* Styling for the Welcome message */
+.username {
+  font-weight: bold;
+  color: #8b61a4; /* Set the username color to a contrasting color */
+}
+
+/* Styling for the buttons */
+.nav-button {
+  background-color: #ff6600; /* Set button background color */
+  color: #fff; /* Set button text color to white */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+.nav-button:hover {
+  background-color: #ff9933; /* Lighter color on hover */
+}
+
+/* Specific styles for each button */
+.home {
+  background-color: #009933; /* Green for Home button */
+}
+
+.add-pool {
+  background-color: #0066cc; /* Blue for Add New Pool button */
+}
+
+.logout {
+  background-color: #cc3300; /* Red for Logout button */
+}
+/* Define a class for the LeaderBoard button */
+.leaderboard-button {
+  background-color: #663399; /* Customize the background color */
+  color: #fff; /* Set text color to white */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Button hover effect for the LeaderBoard button */
+.leaderboard-button:hover {
+  background-color: #9966cc; /* Lighter color on hover */
+}
+
+/* Leaderboard Styles */
+.leaderboard {
+  margin: 100px auto; /* Center the leaderboard horizontally */
+  max-width: 800px; /* Optional: Limit the maximum width of the leaderboard */
+}
+
+.leaderboard h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.leaderboard-list {
+  list-style-type: none;
+  padding: 0;
+  border-collapse: collapse; /* Collapse table borders */
+  width: 100%;
+}
+
+.leaderboard-item {
+  display: table-row;
+  border-bottom: 1px solid #ddd; /* Add a bottom border to separate rows */
+}
+
+.user-info {
+  display: table-cell;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-name {
+  font-weight: bold;
+}
+
+.user-stats {
+  display: table-cell;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Style the header row */
+.leaderboard-item:first-child {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+/* Style alternating rows */
+.leaderboard-item:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Style cells */
+.leaderboard-item td {
+  padding: 10px;
+  border-right: 1px solid #ddd; /* Add right border to cells */
+}
+
+/* Remove right border from the last cell in each row */
+.leaderboard-item td:last-child {
+  border-right: none;
+}
+.Create-Question {
+  text-align: center;
+  margin: 10px;
+}
+
+.Option {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10px;
 }
